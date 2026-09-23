@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royal Hearts Collections</title>
-
-  <style>
+  <meta name="description" content="Royal Hearts Collections - Fashion, perfumes, accessories and stylish products.">
+  <title>Royal Hearts Collections 👑</title>  <style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,51 +11,60 @@
       font-family: Arial, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #f8f5f0;
       color: #222;
+      line-height: 1.6;
     }
 
     header {
       background: #111;
       color: white;
       text-align: center;
-      padding: 35px 20px;
+      padding: 40px 20px;
     }
 
     header h1 {
       color: #d4af37;
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin-bottom: 8px;
     }
 
     header p {
       font-size: 16px;
+      color: #eee;
     }
 
     nav {
       background: #d4af37;
-      padding: 12px;
+      padding: 14px 10px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
       color: #111;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 12px;
+      margin: 0 10px;
     }
 
     .hero {
       text-align: center;
-      padding: 70px 20px;
+      padding: 75px 20px;
       background: linear-gradient(135deg, #fff, #f1e4bd);
     }
 
     .hero h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
+      font-size: 40px;
       color: #111;
+      margin-bottom: 12px;
     }
 
     .hero p {
@@ -76,45 +83,88 @@
     }
 
     .section {
-      padding: 45px 20px;
-      max-width: 1000px;
+      padding: 50px 20px;
+      max-width: 1100px;
       margin: auto;
       text-align: center;
     }
 
     .section h2 {
       color: #b28b17;
-      margin-bottom: 25px;
-      font-size: 28px;
+      margin-bottom: 30px;
+      font-size: 30px;
     }
 
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .product {
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
     }
 
     .product .icon {
-      font-size: 50px;
-      margin-bottom: 15px;
+      font-size: 55px;
+      margin-bottom: 12px;
     }
 
     .product h3 {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .product p {
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      display: block;
+      color: #b28b17;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 12px 0;
+    }
+
+    .order {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 10px 17px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .perfume-section {
+      background: #111;
+      color: white;
+      max-width: none;
+    }
+
+    .perfume-section h2 {
+      color: #d4af37;
+    }
+
+    .perfume-section .product {
+      color: #222;
     }
 
     .contact {
       background: #111;
       color: white;
       text-align: center;
-      padding: 45px 20px;
+      padding: 50px 20px;
     }
 
     .contact h2 {
@@ -123,7 +173,7 @@
     }
 
     .contact a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
@@ -132,77 +182,126 @@
       background: #000;
       color: #aaa;
       text-align: center;
-      padding: 18px;
+      padding: 20px;
       font-size: 14px;
     }
-  </style>
-</head>
 
-<body>
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 29px;
+      }
 
-  <header>
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+      }
+    }
+  </style></head><body>  <header>
     <h1>👑 Royal Hearts Collections</h1>
     <p>Style • Elegance • Quality</p>
-  </header>
-
-  <nav>
+  </header>  <nav>
     <a href="#home">Home</a>
+    <a href="#perfumes">Perfumes</a>
     <a href="#collections">Collections</a>
     <a href="#contact">Contact</a>
-  </nav>
-
-  <section class="hero" id="home">
+  </nav>  <section class="hero" id="home">
     <h2>Welcome to Royal Hearts</h2>
-    <p>Discover stylish products carefully selected for you.</p>
-    <a href="#collections" class="button">Explore Collections</a>
-  </section>
+    <p>Discover perfumes, fashion, accessories and more.</p>
+    <a href="#perfumes" class="button">Shop Perfumes</a>
+  </section>  <!-- PERFUME COLLECTION -->  <section class="section perfume-section" id="perfumes">
+    <h2>🌹 Royal Perfume Collection</h2><div class="products">
 
-  <section class="section" id="collections">
-    <h2>Our Collections</h2>
+  <div class="product">
+    <div class="icon">🌹</div>
+    <h3>Royal Rose</h3>
+    <p>Elegant floral fragrance with a beautiful romantic character.</p>
+    <span class="price">SLE 250</span>
+    <a class="order" href="https://wa.me/23273520329?text=Hello%20Royal%20Hearts%2C%20I%20would%20like%20to%20order%20Royal%20Rose.">Order on WhatsApp</a>
+  </div>
 
-    <div class="products">
+  <div class="product">
+    <div class="icon">✨</div>
+    <h3>Golden Elegance</h3>
+    <p>A luxurious fragrance created for a confident and stylish look.</p>
+    <span class="price">SLE 300</span>
+    <a class="order" href="https://wa.me/23272152395?text=Hello%20Royal%20Hearts%2C%20I%20would%20like%20to%20order%20Golden%20Elegance.">Order on WhatsApp</a>
+  </div>
 
-      <div class="product">
-        <div class="icon">👕</div>
-        <h3>Fashion</h3>
-        <p>Discover stylish fashion items for your everyday look.</p>
-      </div>
+  <div class="product">
+    <div class="icon">🖤</div>
+    <h3>Royal Noir</h3>
+    <p>A rich and sophisticated fragrance for an unforgettable impression.</p>
+    <span class="price">SLE 350</span>
+    <a class="order" href="https://wa.me/23273520329?text=Hello%20Royal%20Hearts%2C%20I%20would%20like%20to%20order%20Royal%20Noir.">Order on WhatsApp</a>
+  </div>
 
-      <div class="product">
-        <div class="icon">👜</div>
-        <h3>Accessories</h3>
-        <p>Beautiful accessories to complete your style.</p>
-      </div>
+  <div class="product">
+    <div class="icon">💎</div>
+    <h3>Diamond Mist</h3>
+    <p>A fresh, elegant fragrance suitable for everyday wear.</p>
+    <span class="price">SLE 275</span>
+    <a class="order" href="https://wa.me/23272152395?text=Hello%20Royal%20Hearts%2C%20I%20would%20like%20to%20order%20Diamond%20Mist.">Order on WhatsApp</a>
+  </div>
 
-      <div class="product">
-        <div class="icon">🎧</div>
-        <h3>Gadgets</h3>
-        <p>Useful and stylish gadgets at affordable prices.</p>
-      </div>
+</div>
 
-    </div>
-  </section>
+  </section>  <!-- OTHER COLLECTIONS -->  <section class="section" id="collections">
+    <h2>✨ Our Collections</h2><div class="products">
 
-  <section class="contact" id="contact">
-    <h2>Contact Royal Hearts</h2>
+  <div class="product">
+    <div class="icon">👕</div>
+    <h3>Fashion</h3>
+    <p>Discover stylish fashion items for your everyday look.</p>
+  </div>
 
-    <p>WhatsApp:</p>
-    <p>
-      <a href="https://wa.me/23273520329">+232 73 520329</a>
-    </p>
+  <div class="product">
+    <div class="icon">👜</div>
+    <h3>Accessories</h3>
+    <p>Beautiful accessories to complete your style.</p>
+  </div>
 
-    <p>
-      <a href="https://wa.me/23272152395">+232 72 152395</a>
-    </p>
+  <div class="product">
+    <div class="icon">🎧</div>
+    <h3>Gadgets</h3>
+    <p>Useful and stylish gadgets at affordable prices.</p>
+  </div>
 
-    <br>
+</div>
 
-    <p>We're happy to hear from you! ❤️</p>
-  </section>
+  </section>  <!-- CONTACT -->  <section class="contact" id="contact">
+    <h2>📱 Contact Royal Hearts</h2><p>WhatsApp 1:</p>
+<p>
+  <a href="https://wa.me/23273520329">+232 73 520329</a>
+</p>
 
-  <footer>
+<br>
+
+<p>WhatsApp 2:</p>
+<p>
+  <a href="https://wa.me/23272152395">+232 72 152395</a>
+</p>
+
+<br>
+
+<p>We're happy to hear from you! ❤️</p>
+
+  </section>  <footer>
     © 2026 Royal Hearts Collections. All Rights Reserved.
-  </footer>
-
-</body>
+  </footer></body>
 </html>
+```After you paste it
+
+1. Scroll to the bottom.
+2. Tap Commit changes.
+3. Choose Commit directly to the "main" branch.
+4. Confirm the commit.
+5. Wait a couple of minutes.
+6. Open your Royal Hearts website again.
+
+Your existing GitHub Pages workflow should automatically publish the updated version.
+
+One important note: I used sample perfume names and prices ("SLE 250", "SLE 300", etc.). Before you start selling, replace those with your actual perfume names, sizes, and prices.
